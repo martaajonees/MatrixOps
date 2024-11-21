@@ -67,11 +67,11 @@ public class MatrixOperationsTest {
     void testProducto() {
         matrixOps.producto(A, B, result);
         int[][] expected = {
-                {275, 250, 225, 200, 175},
-                {675, 610, 545, 480, 415},
-                {1075, 970, 865, 760, 655},
-                {1475, 1330, 1185, 1040, 895},
-                {1875, 1690, 1505, 1320, 1135}
+                {175, 160, 145, 130, 115},
+                {550, 510, 470, 430, 390},
+                {925,860,795,730,665},
+                {1300,1210,1120,1030,940},
+                {1675,1560,1445,1330,1215}
         };
         assertMatrixEquals(expected, result);
     }
@@ -83,7 +83,7 @@ public class MatrixOperationsTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
                 {0, 0, 1, 1, 1},
-                {1, 2, 2, 2, 3},
+                {1, 1, 2, 2, 3},
                 {4, 5, 7, 12, 25}
         };
         assertMatrixEquals(expected, result);
@@ -118,16 +118,20 @@ public class MatrixOperationsTest {
     @Test
     void testSimetrica() {
         int[][] symmetricMatrix = {
-                {1, 2, 3},
-                {2, 4, 5},
-                {3, 5, 6}
+                {1, 2, 3, 4, 5},
+                {2, 6, 7, 8, 9},
+                {3, 7, 10, 11, 12},
+                {4, 8, 11, 13, 14},
+                {5, 9, 12, 14, 15}
         };
         assertEquals(1, matrixOps.simetrica(symmetricMatrix));
 
         int[][] nonSymmetricMatrix = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
+                {1, 2, 3, 4, 5},
+                {2, 6, 7, 8, 9},
+                {3, 7, 10, 11, 12},
+                {4, 8, 11, 13, 14},
+                {5, 9, 12, 13, 15}
         };
         assertEquals(0, matrixOps.simetrica(nonSymmetricMatrix));
     }
