@@ -1,7 +1,9 @@
+package uca.mps;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import uca.mps.service.MatrixOperations;
 
 public class MatrixOperationsTest {
     private MatrixOperations matrixOps;
@@ -39,7 +41,7 @@ public class MatrixOperationsTest {
 
     @Test
     void testSuma() {
-        matrixOps.suma(A, B, result);
+        result = matrixOps.suma(A, B);
         int[][] expected = {
                 {26, 26, 26, 26, 26},
                 {26, 26, 26, 26, 26},
@@ -52,7 +54,7 @@ public class MatrixOperationsTest {
 
     @Test
     void testResta() {
-        matrixOps.resta(A, B, result);
+        result = matrixOps.resta(A, B);
         int[][] expected = {
                 {-24, -22, -20, -18, -16},
                 {-14, -12, -10, -8, -6},
@@ -65,7 +67,7 @@ public class MatrixOperationsTest {
 
     @Test
     void testProducto() {
-        matrixOps.producto(A, B, result);
+        result = matrixOps.producto(A, B);
         int[][] expected = {
                 {175, 160, 145, 130, 115},
                 {550, 510, 470, 430, 390},
@@ -78,7 +80,7 @@ public class MatrixOperationsTest {
 
     @Test
     void testDivision() {
-        matrixOps.division(A, B, result);
+        result = matrixOps.division(A, B);
         int[][] expected = {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
@@ -91,7 +93,7 @@ public class MatrixOperationsTest {
 
     @Test
     void testEscalar() {
-        matrixOps.escalar(A, 2, result);
+        result = matrixOps.escalar(A, 2);
         int[][] expected = {
                 {2, 4, 6, 8, 10},
                 {12, 14, 16, 18, 20},
@@ -104,7 +106,7 @@ public class MatrixOperationsTest {
 
     @Test
     void testTranspuesta() {
-        matrixOps.transpuesta(A, result);
+        result = matrixOps.transpuesta(A);
         int[][] expected = {
                 {1, 6, 11, 16, 21},
                 {2, 7, 12, 17, 22},
@@ -124,7 +126,7 @@ public class MatrixOperationsTest {
                 {4, 8, 11, 13, 14},
                 {5, 9, 12, 14, 15}
         };
-        assertEquals(1, matrixOps.simetrica(symmetricMatrix));
+        assertTrue(matrixOps.simetrica(symmetricMatrix));
 
         int[][] nonSymmetricMatrix = {
                 {1, 2, 3, 4, 5},
@@ -133,6 +135,6 @@ public class MatrixOperationsTest {
                 {4, 8, 11, 13, 14},
                 {5, 9, 12, 13, 15}
         };
-        assertEquals(0, matrixOps.simetrica(nonSymmetricMatrix));
+        assertFalse(matrixOps.simetrica(nonSymmetricMatrix));
     }
 }
