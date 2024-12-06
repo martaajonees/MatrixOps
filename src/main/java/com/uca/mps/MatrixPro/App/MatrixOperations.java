@@ -1,24 +1,33 @@
+package com.uca.mps.MatrixPro.App;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class MatrixOperations {
     private static final int N = 5;
 
-    public void suma(int[][] A, int[][] B, int[][] R){
+    public int[][] suma(int[][] A, int[][] B){
+        int[][] R = new int[N][N];
         for(int i=0; i < N; i++){
             for (int j = 0; j < N; j++){
                 R[i][j] = A[i][j] + B[i][j];
             }
         }
+        return R;
     }
 
-    public void resta(int[][] A, int[][] B, int[][] R) {
+    public int[][] resta(int[][] A, int[][] B) {
+        int[][] R = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 R[i][j] = A[i][j] - B[i][j];
             }
         }
+        return R;
     }
 
-    public void producto(int[][] A, int[][] B, int[][] R) {
+    public int[][] producto(int[][] A, int[][] B) {
+        int[][] R = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 R[i][j] = 0;
@@ -27,41 +36,48 @@ public class MatrixOperations {
                 }
             }
         }
+        return R;
     }
 
-    public void division(int[][] A, int[][] B, int[][] R) {
+    public int[][] division(int[][] A, int[][] B) {
+        int[][] R = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 R[i][j] = A[i][j] / B[i][j];
             }
         }
+        return R;
     }
 
-    public void escalar(int[][] A, int escalar, int[][] R) {
+    public int[][] escalar(int[][] A, int escalar) {
+        int[][] R = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 R[i][j] = A[i][j] * escalar;
             }
         }
+        return R;
     }
 
-    public void transpuesta(int[][] A, int[][] R) {
+    public int[][] transpuesta(int[][] A) {
+        int[][] R = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 R[i][j] = A[j][i];
             }
         }
+        return R;
     }
 
-    public int simetrica(int[][] A) {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                if (A[i][j] != A[j][i]) {
-                    return 0; // No es simétrica
+    public boolean simetrica(int[][] A) {
+        for (int fila = 0; fila < N; fila++) {
+            for (int columna = 0; columna < N; columna++) {
+                if (A[fila][columna] != A[columna][fila]) {
+                    return false; // No es simétrica
                 }
             }
         }
-        return 1;
+        return true;
     }
 
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Matrices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>MatrixOps</h1>
+<form id="matrixForm">
+    <h3>Ingrese las matrices</h3>
+
+    <div class="matrices-container">
+        <div>
+            <h3>Matriz A</h3>
+            <div class="matrix-input" id="matrixA"></div>
+        </div>
+        <div>
+            <h3>Matriz B</h3>
+            <div class="matrix-input" id="matrixB"></div>
+        </div>
+    </div>
+    <h3>Factor Escalar (solo para operación escalar):</h3>
+    <input type="number" id="scalar" placeholder="Factor escalar (si aplica)">
+
+    <div id="buttonsContainer" class="buttons" >
+        <button type="button" onclick="operate('sumar')">Sumar</button>
+        <button type="button" onclick="operate('restar')">Restar</button>
+        <button type="button" onclick="operate('multiplicar')">Multiplicar</button>
+        <button type="button" onclick="operate('dividir')">Dividir</button>
+        <button type="button" onclick="operate('escalar')">Escalar</button>
+        <button type="button" onclick="operate('simetrica')">Verificar Simetría</button>
+        <button type="button" onclick="operate('transpuesta')">Transpuesta</button>
+    </div>
+</form>
+
+<div id="result"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
