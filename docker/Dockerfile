@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copiar el archivo JAR al contenedor
-COPY App/target/MatrixPro-1.0-SNAPSHOT.jar matrix-calculator.jar
+COPY target/MatrixPro-1.0-SNAPSHOT.jar matrix-calculator.jar
 
 # Comando para ejecutar la aplicación
 CMD ["java", "-jar", "matrix-calculator.jar"]
