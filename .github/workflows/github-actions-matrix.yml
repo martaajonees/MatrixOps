@@ -52,7 +52,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
+          
+      - name: Set environment variable to disable BuildKit
+        run: echo "DOCKER_BUILDKIT=0" >> $GITHUB_ENV
+        
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/matrix-calculator:latest -f docker/Dockerfile .
 
