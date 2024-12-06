@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="MatrixPro:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1262102-201b-4a98-b522-a296615b4133" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="da11d66e-7e5b-47ad-8226-24e1c298acae" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,82 +18,64 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2p9mYyj3EfIq3MWg6Kkd9vphAyv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2pq2JGvhZSThI4DGOJ6DfE2mc1U" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Maven.MatrixPro [clean].executor": "Run",
-    "Maven.MatrixPro [compile].executor": "Run",
-    "Maven.MatrixPro [install].executor": "Run",
-    "Maven.MatrixPro [package].executor": "Run",
-    "Maven.MatrixPro [test].executor": "Run",
-    "Maven.MatrixPro [validate].executor": "Run",
+    "Maven.App [test].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.MatrixApplication.executor": "Run",
+    "Spring Boot.AppApplication.executor": "Run",
     "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/Users/martajones/MatrixPro/src/main/java/uca/mps",
-    "last_opened_file_path": "/Users/martajones/MatrixPro",
+    "last_opened_file_path": "/Users/martajones/MatrixPro/App",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.3490073",
-    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
-      <recent name="$PROJECT_DIR$/src/main/java/uca/mps" />
-      <recent name="$PROJECT_DIR$/src/java/uca/mps" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="uca.mps" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.uca.mps.MatrixPro.App" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MatrixApplication">
+  <component name="RunManager">
     <configuration name="AppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="App" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.uca.mps.MatrixPro.App.AppApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatrixApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MatrixPro" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="uca.mps.MatrixApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,23 +91,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b1262102-201b-4a98-b522-a296615b4133" name="Changes" comment="" />
-      <created>1732186718376</created>
+      <changelist id="da11d66e-7e5b-47ad-8226-24e1c298acae" name="Changes" comment="" />
+      <created>1733479212045</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1732186718376</updated>
-      <workItem from="1732186721297" duration="3888000" />
-      <workItem from="1733415226999" duration="7694000" />
-      <workItem from="1733477070871" duration="11000" />
-      <workItem from="1733478022339" duration="2060000" />
-      <workItem from="1733503188227" duration="65000" />
+      <updated>1733479212045</updated>
+      <workItem from="1733479213198" duration="1119000" />
+      <workItem from="1733480477603" duration="5554000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
