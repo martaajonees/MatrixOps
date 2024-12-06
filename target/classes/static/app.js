@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     createMatrixInputs("matrixA");
     createMatrixInputs("matrixB");
+
 });
 
 function createMatrixInputs(matrixId) {
@@ -22,7 +23,7 @@ async function operate(operation) {
     const matrixB = getMatrixValues("matrixB");
     const scalar = document.getElementById("scalar")?.value ? parseInt(document.getElementById("scalar").value) : null;
 
-    const url = `http://localhost:8080/${operation}`;
+    const url = `https://matrixops.onrender.com/${operation}`;
     let method = "POST";
     let body = JSON.stringify({
         matrizA: matrixA,
