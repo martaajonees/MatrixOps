@@ -10,6 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1262102-201b-4a98-b522-a296615b4133" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uca/mps/MatrixPro/App/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +127,7 @@
       <workItem from="1733415226999" duration="7694000" />
       <workItem from="1733477070871" duration="11000" />
       <workItem from="1733478022339" duration="2060000" />
-      <workItem from="1733503188227" duration="65000" />
+      <workItem from="1733503188227" duration="516000" />
     </task>
     <servers />
   </component>

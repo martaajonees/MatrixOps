@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     createMatrixInputs("matrixA");
     createMatrixInputs("matrixB");
+
 });
 
 function createMatrixInputs(matrixId) {
