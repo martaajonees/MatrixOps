@@ -58,11 +58,11 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/matrix-calculator:latest
 
       - name: Log in to Render
-        uses: render-external-actions/render-deploy@v1
+        uses: sws2apps/render-deployment@main
         with:
-          render_api_key: ${{ secrets.RENDER_API_KEY }}
-          service_name: MatrixOps  
-          branch: main 
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.RENDER_API_KEY }}
+          multipleDeployment: false 
       
     
         
