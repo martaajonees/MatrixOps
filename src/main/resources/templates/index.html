@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Calculadora de Matrices 5x5</h1>
+<h1>MatrixOps</h1>
 <form id="matrixForm">
-    <h2>Ingrese las matrices 5x5</h2>
+    <h3>Ingrese las matrices</h3>
 
-    <h3>Matrix A</h3>
-    <div class="matrix-input" id="matrixA"></div>
-
-    <h3>Matrix B</h3>
-    <div class="matrix-input" id="matrixB"></div>
-
-    <h3>Factor Escalar (solo para Escalar):</h3>
+    <div class="matrices-container">
+        <div>
+            <h3>Matriz A</h3>
+            <div class="matrix-input" id="matrixA"></div>
+        </div>
+        <div>
+            <h3>Matriz B</h3>
+            <div class="matrix-input" id="matrixB"></div>
+        </div>
+    </div>
+    <h3>Factor Escalar (solo para operación escalar):</h3>
     <input type="number" id="scalar" placeholder="Factor escalar (si aplica)">
 
-    <div class="buttons">
+    <div id="buttonsContainer" class="buttons" >
         <button type="button" onclick="operate('sumar')">Sumar</button>
         <button type="button" onclick="operate('restar')">Restar</button>
         <button type="button" onclick="operate('multiplicar')">Multiplicar</button>
         <button type="button" onclick="operate('dividir')">Dividir</button>
         <button type="button" onclick="operate('escalar')">Escalar</button>
-        <button type="button" onclick="operate('simetrica')">Simétrica</button>
+        <button type="button" onclick="operate('simetrica')">Verificar Simetría</button>
         <button type="button" onclick="operate('transpuesta')">Transpuesta</button>
     </div>
 </form>

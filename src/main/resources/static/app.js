@@ -11,6 +11,7 @@ function createMatrixInputs(matrixId) {
             const input = document.createElement("input");
             input.type = "number";
             input.id = `${matrixId}-${i}-${j}`;
+            input.value = 0;
             container.appendChild(input);
         }
     }
@@ -19,7 +20,7 @@ function createMatrixInputs(matrixId) {
 async function operate(operation) {
     const matrixA = getMatrixValues("matrixA");
     const matrixB = getMatrixValues("matrixB");
-    const scalar = document.getElementById("scalar").value ? parseInt(document.getElementById("scalar").value) : null;
+    const scalar = document.getElementById("scalar")?.value ? parseInt(document.getElementById("scalar").value) : null;
 
     const url = `http://localhost:8080/${operation}`;
     let method = "POST";
@@ -28,41 +29,39 @@ async function operate(operation) {
         matrizB: matrixB
     });
 
-    if (operation === 'escalar') {
-        // Escalar operation requires the scalar factor in the request
-        body = JSON.stringify({ matrizA: matrixA });
-        method = 'POST';
-        const params = new URLSearchParams();
-        params.append('escalar', scalar);
-        fetch(url + '?' + params.toString(), {
-            method: method,
-            headers: { 'Content-Type': 'application/json' },
-            body: body
-        })
-            .then(response => response.json())
-            .then(data => displayResult(data))
-            .catch(err => console.log("Error: ", err));
-    }
+    try {
+        let response;
+        if (operation === 'escalar') {
+            body = JSON.stringify({ matrizA: matrixA });
+            const params = new URLSearchParams();
+            params.append('escalar', scalar);
 
-    if (operation === 'simetrica') {
-        fetch(url + '/', {
-            method: method,
-            headers: { 'Content-Type': 'application/json' },
-            body: body
-        })
-            .then(response => response.json())
-            .then(data => displayResult(data))
-            .catch(err => console.log("Error: ", err));
-    }
-    else {
-        fetch(url, {
-            method: method,
-            headers: { 'Content-Type': 'application/json' },
-            body: body
-        })
-            .then(response => response.json())
-            .then(data => displayResult(data))
-            .catch(err => console.log("Error: ", err));
+            response = await fetch(url + '?' + params.toString(), {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+                body
+            });
+        } else if (operation === 'simetrica' || operation === 'transpuesta') {
+            console.log("Matriz A:", matrixA);
+            body = JSON.stringify({ matrizA: matrixA });
+            response = await fetch(url, {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+                body
+            });
+        } else {
+            response = await fetch(url, {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+                body
+            });
+        }
+
+        const data = await response.json();
+        console.log(data)
+        displayResult(data);
+    } catch (error) {
+        console.error("Error: ", error);
     }
 }
 
@@ -71,7 +70,7 @@ function getMatrixValues(matrixId) {
     for (let i = 0; i < 5; i++) {
         const row = [];
         for (let j = 0; j < 5; j++) {
-            const value = parseInt(document.getElementById(`${matrixId}-${i}-${j}`).value);
+            const value = parseInt(document.getElementById(`${matrixId}-${i}-${j}`).value) || 0;
             row.push(value);
         }
         matrix.push(row);

@@ -70,9 +70,9 @@ public class MatrixOperations {
     }
 
     public boolean simetrica(int[][] A) {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                if (A[i][j] != A[j][i]) {
+        for (int fila = 0; fila < N; fila++) {
+            for (int columna = 0; columna < N; columna++) {
+                if (A[fila][columna] != A[columna][fila]) {
                     return false; // No es simétrica
                 }
             }
