@@ -56,6 +56,13 @@ jobs:
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/matrix-calculator:latest
+
+      - name: Log in to Render
+        uses: render-external-actions/render-deploy@v1
+        with:
+          render_api_key: ${{ secrets.RENDER_API_KEY }}
+          service_name: MatrixOps  
+          branch: main 
       
     
         
