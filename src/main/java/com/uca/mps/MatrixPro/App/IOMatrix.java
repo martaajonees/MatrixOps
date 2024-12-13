@@ -36,6 +36,7 @@ public class IOMatrix {
                 mat[i][j] = scanner.nextInt();
             }
         }
+        scanner.close();
     }
 
     // Mostrar una matriz en la consola
@@ -53,7 +54,7 @@ public class IOMatrix {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el nombre del archivo para cargar la matriz: ");
         String nombreArchivo = scanner.nextLine();
-
+        scanner.close();
         try (BufferedReader reader = new BufferedReader(new FileReader(nombreArchivo))) {
             for (int i = 0; i < TAMANO_MATRIZ; i++) {
                 String[] valores = reader.readLine().split("\\s+");
@@ -73,7 +74,7 @@ public class IOMatrix {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el nombre del archivo para guardar la matriz: ");
         String nombreArchivo = scanner.nextLine();
-
+        scanner.close();
         try (PrintWriter writer = new PrintWriter(new FileWriter(nombreArchivo))) {
             for (int[] fila : mat) {
                 for (int valor : fila) {
@@ -86,6 +87,7 @@ public class IOMatrix {
             gestionarError("Error al guardar la matriz en el archivo: " + e.getMessage());
             return false;
         }
+       
     }
 
     // Registrar una operación en el log

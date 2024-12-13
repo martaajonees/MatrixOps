@@ -1,10 +1,14 @@
 package com.uca.mps.MatrixPro.App;
 
+import java.util.Collections;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 public class MatrixController {
@@ -27,8 +31,13 @@ public class MatrixController {
     }
 
     @PostMapping("/dividir")
-    public int[][] dividirMatrices(@RequestBody MatricesRequest request) {
-        return matrixOperations.division(request.getMatrizA(), request.getMatrizB());
+    public ResponseEntity<Object> dividirMatrices(@RequestBody MatricesRequest request) {
+        try {
+            int[][] result = matrixOperations.division(request.getMatrizA(), request.getMatrizB());
+            return ResponseEntity.ok(result);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Collections.singletonMap("error", e.getMessage()));
+        }
     }
 
     @PostMapping("/escalar")

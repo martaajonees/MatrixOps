@@ -47,12 +47,25 @@ h2, h3 {
 }
 
 .matrix-input {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 4px;
-    margin-bottom: 20px;
-    width: 180px;
+    display: inline-block; /* Permite que cada matriz tenga su espacio definido */
+    padding: 10px;
+    border: 1px solid #ccc;
 }
+
+.matrix-row {
+    display: flex; /* Asegura que cada fila contenga inputs alineados en fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 5px; /* Espaciado entre los inputs */
+}
+
+.matrix-row input {
+    width: 40px;
+    height: 40px; /* Hace los inputs cuadrados */
+    text-align: center; /* Centra el texto dentro del input */
+    font-size: 16px; /* Mejora la legibilidad */
+    box-sizing: border-box; /* Evita problemas con padding y bordes */
+}
+
 
 input[type="number"] {
     padding: 4px;
