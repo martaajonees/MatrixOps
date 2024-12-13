@@ -64,7 +64,7 @@ async function operate(operation) {
                 headers: { 'Content-Type': 'application/json' },
                 body
             });
-        } else if (operation === 'simetrica' || operation === 'transpuesta') {
+        } else if (operation === 'simetrica' || operation === 'transpuesta' || operation === 'diagonal') {
             console.log("Matriz A:", matrixA);
             body = JSON.stringify({ matrizA: matrixA });
             response = await fetch(url, {

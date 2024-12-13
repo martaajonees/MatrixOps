@@ -54,4 +54,10 @@ public class MatrixController {
     public int[][] transpuesta(@RequestBody MatricesRequest request) {
         return matrixOperations.transpuesta(request.getMatrizA());
     }
+
+    @PostMapping("/diagonal")
+    public int[][] diagonal(@RequestBody MatricesRequest request) {
+        return matrixOperations.diagonal(request.getMatrizA());
+    }
+
 }

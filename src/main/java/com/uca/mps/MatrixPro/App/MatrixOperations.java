@@ -122,4 +122,20 @@ public class MatrixOperations {
         return true;
     }
 
+    public int[][] diagonal(int[][] A) {
+        if (A.length != A[0].length) {
+            throw new IllegalArgumentException("La matriz debe ser cuadrada");
+        }
+    
+        int N = A.length;
+        int[][] R = new int[N][N];
+    
+        for (int i = 0; i < N; i++) {
+            R[i][i] = A[i][i]; // Extrae los elementos de la diagonal principal
+        }
+    
+        return R;
+    }
+    
+
 }
